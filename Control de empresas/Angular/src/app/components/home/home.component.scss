@@ -1,0 +1,48 @@
+
+/***** HOME *****/
+
+#home {
+  background: url("https://dl.dropboxusercontent.com/s/4m9w1xo90gocn9z/SSGTHB82F6.jpg?dl=0") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-wrap {
+  padding-top: 140px;
+}
+
+.home-header {
+  font-family: 'Oswald';
+  font-size: 60px;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Oswald';
+  font-size: 40px;
+  color: #fff;
+}
+
+.home-line {
+  border: 0;
+  height: 3px;
+  width: 90%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 153, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.btn {
+  margin: 10px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #458B74;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #458B74;
+}
+
+

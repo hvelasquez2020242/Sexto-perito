@@ -1,0 +1,31 @@
+  <body>
+    <div class="container" >
+    <div class="row justify-content-center">
+      <div class="col-7">
+        <div style="display: block;">
+          <canvas baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [colors]="doughnutChartColors"
+          [chartType]="doughnutChartType"></canvas>
+        </div>
+      </div>
+      <div class="col align-self-center">
+        <table class="table table-dark table-hover table-bordered border-light">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Stock</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let suc of productosModelGet">
+            <tr>
+              <td > {{suc.nombreProducto}} </td>
+              <td> {{suc.stock}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+  </body>
