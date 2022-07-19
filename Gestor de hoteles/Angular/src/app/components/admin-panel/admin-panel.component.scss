@@ -1,0 +1,1267 @@
+
+// /* ==========================================================================
+//    #FONT
+//    ========================================================================== */
+//    .font-robo {
+//     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+//   }
+
+//   /* ==========================================================================
+//      #GRID
+//      ========================================================================== */
+//   .row {
+//     display: -webkit-box;
+//     display: -webkit-flex;
+//     display: -moz-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-flex-wrap: wrap;
+//     -ms-flex-wrap: wrap;
+//     flex-wrap: wrap;
+//   }
+
+//   .row-space {
+//     -webkit-box-pack: justify;
+//     -webkit-justify-content: space-between;
+//     -moz-box-pack: justify;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+//   }
+
+//   .col-2 {
+//     width: -webkit-calc((100% - 60px) / 2);
+//     width: -moz-calc((100% - 60px) / 2);
+//     width: calc((100% - 60px) / 2);
+//   }
+
+//   @media (max-width: 767px) {
+//     .col-2 {
+//       width: 100%;
+//     }
+//   }
+
+//   /* ==========================================================================
+//      #BOX-SIZING
+//      ========================================================================== */
+//   /**
+//    * More sensible default box-sizing:
+//    * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+//    */
+//   html {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//   }
+
+//   * {
+//     padding: 0;
+//     margin: 0;
+//   }
+
+//   *, *:before, *:after {
+//     -webkit-box-sizing: inherit;
+//     -moz-box-sizing: inherit;
+//     box-sizing: inherit;
+//   }
+
+//   /* ==========================================================================
+//      #RESET
+//      ========================================================================== */
+//   /**
+//    * A very simple reset that sits on top of Normalize.css.
+//    */
+//   body,
+//   h1, h2, h3, h4, h5, h6,
+//   blockquote, p, pre,
+//   dl, dd, ol, ul,
+//   figure,
+//   hr,
+//   fieldset, legend {
+//     margin: 0;
+//     padding: 0;
+//   }
+
+//   /**
+//    * Remove trailing margins from nested lists.
+//    */
+//   li > ol,
+//   li > ul {
+//     margin-bottom: 0;
+//   }
+
+//   /**
+//    * Remove default table spacing.
+//    */
+//   table {
+//     border-collapse: collapse;
+//     border-spacing: 0;
+//   }
+
+//   /**
+//    * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+//    *    on fieldsets.
+//    */
+//   fieldset {
+//     min-width: 0;
+//     /* [1] */
+//     border: 0;
+//   }
+
+//   button {
+//     outline: none;
+//     background: none;
+//     border: none;
+//   }
+
+//   /* ==========================================================================
+//      #PAGE WRAPPER
+//      ========================================================================== */
+//   .page-wrapper {
+//     min-height: 100vh;
+//   }
+
+//   body {
+//     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+//     font-weight: 400;
+//     font-size: 14px;
+//   }
+
+//   h1, h2, h3, h4, h5, h6 {
+//     font-weight: 400;
+//   }
+
+//   h1 {
+//     font-size: 36px;
+//   }
+
+//   h2 {
+//     font-size: 30px;
+//   }
+
+//   h3 {
+//     font-size: 24px;
+//   }
+
+//   h4 {
+//     font-size: 18px;
+//   }
+
+//   h5 {
+//     font-size: 15px;
+//   }
+
+//   h6 {
+//     font-size: 13px;
+//   }
+
+//   /* ==========================================================================
+//      #BACKGROUND
+//      ========================================================================== */
+//   .bg-blue {
+//     background: #2c6ed5;
+//   }
+
+//   /* ==========================================================================
+//      #SPACING
+//      ========================================================================== */
+//   .p-t-100 {
+//     padding-top: 100px;
+//   }
+
+//   .p-t-20 {
+//     padding-top: 20px;
+//   }
+
+//   .p-b-100 {
+//     padding-bottom: 100px;
+//   }
+
+//   /* ==========================================================================
+//      #WRAPPER
+//      ========================================================================== */
+//   .wrapper {
+//     margin: 0 auto;
+//   }
+
+//   .wrapper--w680 {
+//     max-width: 680px;
+//   }
+
+//   /* ==========================================================================
+//      #BUTTON
+//      ========================================================================== */
+//   .btn {
+//     line-height: 40px;
+//     display: inline-block;
+//     padding: 0 25px;
+//     cursor: pointer;
+//     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+//     color: #fff;
+//     -webkit-transition: all 0.4s ease;
+//     -o-transition: all 0.4s ease;
+//     -moz-transition: all 0.4s ease;
+//     transition: all 0.4s ease;
+//     font-size: 14px;
+//     font-weight: 700;
+//   }
+
+//   .btn--radius {
+//     -webkit-border-radius: 3px;
+//     -moz-border-radius: 3px;
+//     border-radius: 3px;
+//   }
+
+//   .btn--green {
+//     background: #57b846;
+//   }
+
+//   .btn--green:hover {
+//     background: #4dae3c;
+//   }
+
+//   /* ==========================================================================
+//      #DATE PICKER
+//      ========================================================================== */
+//   td.active {
+//     background-color: #2c6ed5;
+//   }
+
+//   input[type="date" i] {
+//     padding: 14px;
+//   }
+
+//   .table-condensed td, .table-condensed th {
+//     font-size: 14px;
+//     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+//     font-weight: 400;
+//   }
+
+//   .daterangepicker td {
+//     width: 40px;
+//     height: 30px;
+//   }
+
+//   .daterangepicker {
+//     border: none;
+//     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     display: none;
+//     border: 1px solid #e0e0e0;
+//     margin-top: 5px;
+//   }
+
+//   .daterangepicker::after, .daterangepicker::before {
+//     display: none;
+//   }
+
+//   .daterangepicker thead tr th {
+//     padding: 10px 0;
+//   }
+
+//   .daterangepicker .table-condensed th select {
+//     border: 1px solid #ccc;
+//     -webkit-border-radius: 3px;
+//     -moz-border-radius: 3px;
+//     border-radius: 3px;
+//     font-size: 14px;
+//     padding: 5px;
+//     outline: none;
+//   }
+
+//   /* ==========================================================================
+//      #FORM
+//      ========================================================================== */
+//   input {
+//     outline: none;
+//     margin: 0;
+//     border: none;
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none;
+//     width: 100%;
+//     font-size: 14px;
+//     font-family: inherit;
+//   }
+
+//   .input-group {
+//     position: relative;
+//     margin-bottom: 30px;
+//     border-bottom: 2px solid #ccc;
+//   }
+
+//   .input-icon {
+//     position: absolute;
+//     font-size: 18px;
+//     color: #ccc;
+//     right: 8px;
+//     top: 50%;
+//     -webkit-transform: translateY(-50%);
+//     -moz-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%);
+//     -o-transform: translateY(-50%);
+//     transform: translateY(-50%);
+//     cursor: pointer;
+//   }
+
+//   .input--style-1 {
+//     padding: 9px 0;
+//     color: #666;
+//   }
+
+//   .input--style-1::-webkit-input-placeholder {
+//     /* WebKit, Blink, Edge */
+//     color: #555;
+//   }
+
+//   .input--style-1:-moz-placeholder {
+//     /* Mozilla Firefox 4 to 18 */
+//     color: #555;
+//     opacity: 1;
+//   }
+
+//   .input--style-1::-moz-placeholder {
+//     /* Mozilla Firefox 19+ */
+//     color: #555;
+//     opacity: 1;
+//   }
+
+//   .input--style-1:-ms-input-placeholder {
+//     /* Internet Explorer 10-11 */
+//     color: #555;
+//   }
+
+//   .input--style-1:-ms-input-placeholder {
+//     /* Microsoft Edge */
+//     color: #555;
+//   }
+
+//   /* ==========================================================================
+//      #SELECT2
+//      ========================================================================== */
+//   .select--no-search .select2-search {
+//     display: none !important;
+//   }
+
+//   .rs-select2 .select2-container {
+//     width: 100% !important;
+//     outline: none;
+//   }
+
+//   .rs-select2 .select2-container .select2-selection--single {
+//     outline: none;
+//     border: none;
+//     height: 34px;
+//   }
+
+//   .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
+//     line-height: 34px;
+//     padding-left: 0;
+//     color: #555;
+//   }
+
+//   .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow {
+//     height: 32px;
+//     right: 4px;
+//     display: -webkit-box;
+//     display: -webkit-flex;
+//     display: -moz-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-pack: center;
+//     -webkit-justify-content: center;
+//     -moz-box-pack: center;
+//     -ms-flex-pack: center;
+//     justify-content: center;
+//     -webkit-box-align: center;
+//     -webkit-align-items: center;
+//     -moz-box-align: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+//   }
+
+//   .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow b {
+//     display: none;
+//   }
+
+//   .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after {
+//     font-family: "Material-Design-Iconic-Font";
+//     content: '\f2f9';
+//     font-size: 18px;
+//     color: #ccc;
+//     -webkit-transition: all 0.4s ease;
+//     -o-transition: all 0.4s ease;
+//     -moz-transition: all 0.4s ease;
+//     transition: all 0.4s ease;
+//   }
+
+//   .rs-select2 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::after {
+//     -webkit-transform: rotate(-180deg);
+//     -moz-transform: rotate(-180deg);
+//     -ms-transform: rotate(-180deg);
+//     -o-transform: rotate(-180deg);
+//     transform: rotate(-180deg);
+//   }
+
+//   .select2-container--open .select2-dropdown--below {
+//     border: none;
+//     -webkit-border-radius: 3px;
+//     -moz-border-radius: 3px;
+//     border-radius: 3px;
+//     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     border: 1px solid #e0e0e0;
+//     margin-top: 5px;
+//     overflow: hidden;
+//   }
+
+//   /* ==========================================================================
+//      #TITLE
+//      ========================================================================== */
+//   .title {
+//     margin-bottom: 37px;
+//   }
+
+//   /* ==========================================================================
+//      #CARD
+//      ========================================================================== */
+//   .card {
+//     overflow: hidden;
+//     -webkit-border-radius: 3px;
+//     -moz-border-radius: 3px;
+//     border-radius: 3px;
+//     background: #fff;
+//   }
+
+//   .card-1 {
+//     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+//   }
+
+//   .card-1 .card-heading {
+//     background: url("../../../assets/images/bg-head-02.jpg") center center/cover no-repeat;
+//     padding-top: 210px;
+//   }
+
+//   .card-1 .card-body {
+//     padding: 0 90px;
+//     padding-top: 55px;
+//     padding-bottom: 65px;
+//   }
+
+//   @media (max-width: 767px) {
+//     .card-1 .card-body {
+//       padding: 0 40px;
+//       padding-top: 40px;
+//       padding-bottom: 40px;
+//     }
+//   }
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+   .font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  }
+
+  /* ==========================================================================
+     #GRID
+     ========================================================================== */
+  .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .row-space {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .col-2 {
+    width: -webkit-calc((100% - 60px) / 2);
+    width: -moz-calc((100% - 60px) / 2);
+    width: calc((100% - 60px) / 2);
+  }
+
+  @media (max-width: 767px) {
+    .col-2 {
+      width: 100%;
+    }
+  }
+
+  /* ==========================================================================
+     #BOX-SIZING
+     ========================================================================== */
+  /**
+   * More sensible default box-sizing:
+   * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+   */
+
+
+  /* ==========================================================================
+     #RESET
+     ========================================================================== */
+  /**
+   * A very simple reset that sits on top of Normalize.css.
+   */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  blockquote, p, pre,
+  dl, dd, ol, ul,
+  figure,
+  hr,
+  fieldset, legend {
+    margin: 0;
+    padding: 0;
+  }
+
+  /**
+   * Remove trailing margins from nested lists.
+   */
+  li > ol,
+  li > ul {
+    margin-bottom: 0;
+  }
+
+  /**
+   * Remove default table spacing.
+   */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /**
+   * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+   *    on fieldsets.
+   */
+  fieldset {
+    min-width: 0;
+    /* [1] */
+    border: 0;
+  }
+
+  button {
+    outline: none;
+    background: none;
+    border: none;
+  }
+
+  /* ==========================================================================
+     #PAGE WRAPPER
+     ========================================================================== */
+  .page-wrapper {
+    min-height: 100vh;
+  }
+
+  body {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  h6 {
+    font-size: 13px;
+  }
+
+  /* ==========================================================================
+     #BACKGROUND
+     ========================================================================== */
+
+
+  /* ==========================================================================
+     #SPACING
+     ========================================================================== */
+  .p-t-100 {
+    padding-top: 100px;
+  }
+
+  .p-t-180 {
+    padding-top: 180px;
+  }
+
+  .p-t-20 {
+    padding-top: 20px;
+  }
+
+  .p-t-30 {
+    padding-top: 30px;
+  }
+
+  .p-b-100 {
+    padding-bottom: 100px;
+  }
+
+  /* ==========================================================================
+     #WRAPPER
+     ========================================================================== */
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  .wrapper--w960 {
+    max-width: 960px;
+  }
+
+  .wrapper--w680 {
+    max-width: 680px;
+  }
+
+  /* ==========================================================================
+     #BUTTON
+     ========================================================================== */
+  .btn {
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 25px;
+    cursor: pointer;
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .btn--radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .btn--green {
+    background: #57b846;
+  }
+
+  .btn--green:hover {
+    background: #4dae3c;
+  }
+
+  /* ==========================================================================
+     #DATE PICKER
+     ========================================================================== */
+  td.active {
+    background-color: #2c6ed5;
+  }
+
+  input[type="date" i] {
+    padding: 14px;
+  }
+
+  .table-condensed td, .table-condensed th {
+    font-size: 14px;
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .daterangepicker td {
+    width: 40px;
+    height: 30px;
+  }
+
+  .daterangepicker {
+    border: none;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    display: none;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+  }
+
+  .daterangepicker::after, .daterangepicker::before {
+    display: none;
+  }
+
+  .daterangepicker thead tr th {
+    padding: 10px 0;
+  }
+
+  .daterangepicker .table-condensed th select {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px;
+    outline: none;
+  }
+
+  /* ==========================================================================
+     #FORM
+     ========================================================================== */
+  input {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  /* input group 1 */
+  /* end input group 1 */
+  .input-group {
+    position: relative;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .input-icon {
+    position: absolute;
+    font-size: 18px;
+    color: #ccc;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .input--style-2 {
+    padding: 9px 0;
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .input--style-2::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #808080;
+  }
+
+  .input--style-2:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #808080;
+    opacity: 1;
+  }
+
+  .input--style-2::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #808080;
+    opacity: 1;
+  }
+
+  .input--style-2:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #808080;
+  }
+
+  .input--style-2:-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #808080;
+  }
+
+  /* ==========================================================================
+     #SELECT2
+     ========================================================================== */
+  .select--no-search .select2-search {
+    display: none !important;
+  }
+
+  .rs-select2 .select2-container {
+    width: 100% !important;
+    outline: none;
+  }
+
+  .rs-select2 .select2-container .select2-selection--single {
+    outline: none;
+    border: none;
+    height: 36px;
+  }
+
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 36px;
+    padding-left: 0;
+    color: #808080;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+  }
+
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow {
+    height: 34px;
+    right: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow b {
+    display: none;
+  }
+
+  .rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after {
+    font-family: "Material-Design-Iconic-Font";
+    content: '\f2f9';
+    font-size: 18px;
+    color: #ccc;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  .rs-select2 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  .select2-container--open .select2-dropdown--below {
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+
+  /* ==========================================================================
+     #TITLE
+     ========================================================================== */
+
+  .title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 37px;
+  }
+
+  /* ==========================================================================
+     #CARD
+     ========================================================================== */
+  .card {
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .card-2 {
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 100%;
+    display: table;
+  }
+
+  .card-2 .card-heading {
+    background: url("https://static.barcelo.com/content/dam/bhg/master/es/hoteles/guatemala/guatemala-city/barcelo-guatemala-city/main-photos/hotel/BGUA_VIEW_01.jpg") top left/cover no-repeat;
+    width: 29.1%;
+    display: table-cell;
+  }
+
+  .card-2 .card-body {
+    display: table-cell;
+    padding: 80px 90px;
+    padding-bottom: 88px;
+  }
+
+  @media (max-width: 767px) {
+    .card-2 {
+      display: block;
+    }
+    .card-2 .card-heading {
+      width: 100%;
+      display: block;
+      padding-top: 300p x;
+      background-position: left center;
+    }
+    .card-2 .card-body {
+      display: block;
+      padding: 60px 50px;
+    }
+  }
+
+
+  $light-bg: #313D4F;
+
+// global stuff
+body {
+  background-color: #ffff;
+  color: #202020;
+  font-family: "Montserrat", "Helvetica", "Open Sans", "Arial";
+  font-size: 13px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clear() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.navbar {
+  background-color: #ffff;
+}
+
+.sidebar {
+  background-color: #ffff;
+  box-shadow: none;
+
+  .nav-link {
+    border-left: 5px solid transparent;
+    color: #202020;
+    padding: .5rem .75rem;
+
+    &:hover {
+      color: white;
+    }
+
+    &.active {
+      border-left: 5px solid #202020;
+      color: white;
+    }
+  }
+
+  .zmdi {
+    display: inline-block;
+    font-size: 1.35rem;
+    margin-right: 5px;
+    min-width: 25px;
+  }
+}
+
+.card-list {
+  @include clear();
+  width: 100%;
+}
+
+.card {
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  position: relative;
+
+  .zmdi {
+    color: white;
+    font-size: 28px;
+    opacity: 0.3;
+    position: absolute;
+    right: 13px;
+    top: 13px;
+  }
+
+  .stat {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 8px;
+    margin-top: 25px;
+    padding: 10px 10px 0;
+    text-transform: uppercase;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 8px;
+    padding: 10px 10px 0;
+    text-transform: uppercase;
+  }
+
+  .value {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+
+  &.blue {
+    background-color: #2298F1;
+  }
+
+  &.green {
+    background-color: #66B92E;
+  }
+
+  &.orange {
+    background-color: #DA932C;
+  }
+
+  &.red {
+    background-color: #D65B4A;
+  }
+}
+
+.projects {
+  background-color: #202020;
+  border: 1px solid $light-bg;
+  overflow-x: auto;
+  width: 100%;
+
+  &-inner {
+    border-radius: 4px;
+  }
+}
+
+.projects-header {
+  color: white;
+  padding: 22px;
+
+  .count,
+  .title {
+    display: inline-block;
+  }
+
+  .count {
+    color: #738297;
+  }
+
+  .zmdi {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .title {
+    font-size: 21px;
+
+    + .count {
+      margin-left: 5px;
+    }
+  }
+}
+
+.projects-table {
+  background: #273142;
+  width: 100%;
+
+  td,
+  th {
+    color: white;
+    padding: 10px 22px;
+    vertical-align: middle;
+  }
+
+  td p {
+    font-size: 12px;
+
+    &:last-of-type {
+      color: #202020;
+      font-size: 11px;
+    }
+  }
+
+  th {
+    background-color: $light-bg;
+  }
+
+  tr {
+    &:hover {
+      background-color: lighten(#202020, 5%);
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $light-bg;
+    }
+  }
+
+  .member {
+    figure,
+    .member-info {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    figure + .member-info {
+      margin-left: 7px;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  .status > form {
+    float: right;
+  }
+
+  .status-text {
+    display: inline-block;
+    font-size: 12px;
+    margin: 11px 0;
+    padding-left: 20px;
+    position: relative;
+
+    &:before {
+      border: 3px solid;
+      border-radius: 50%;
+      content: "";
+      height: 14px;
+      left: 0;
+      position: absolute;
+      top: 1px;
+      width: 14px;
+    }
+
+    &.status-blue:before {
+      border-color: #1C93ED;
+    }
+
+    &.status-green:before {
+      border-color: #66B92E;
+    }
+
+    &.status-orange:before {
+      border-color: #DA932C;
+    }
+
+    &.status-red:before {
+      border-color: #D65B4A;
+    }
+  }
+}
+// selectric plugin styling
+.selectric {
+  background-color: transparent;
+  border-color: $light-bg;
+  border-radius: 4px;
+  .label {
+    color: #202020;
+    line-height: 34px;
+    margin-right: 10px;
+    text-align: left;
+  }
+  &-wrapper {
+    float: right;
+    width: 150px;
+  }
+}
+// charts
+.chart {
+  border-radius: 3px;
+  // box-shadow: 0 0 10px -3px black;
+  border: 1px solid $light-bg;
+  color: white;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+
+  canvas {
+    height: 400px;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .actions {
+    margin: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    span {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 20px;
+      margin: 5px;
+      padding: 4px;
+    }
+
+    .btn-link {
+      color: white;
+
+      i {
+          font-size: 1.75rem;
+      }
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    margin: 0;
+    padding: 15px 0 5px;
+    + .tagline {
+      margin-top: 10px;
+    }
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+}
+
+.danger-item {
+  border-left: 4px solid #A84D43;
+}
+
+.zmdi {
+  line-height: 1;
+  vertical-align: middle;
+}
+

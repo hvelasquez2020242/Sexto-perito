@@ -1,0 +1,112 @@
+<section class="home">
+  <div class="in-flex">
+    <div class="container2">
+      <div class="panel post">
+        <a class="etia" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getReservacion()"><span>1 </span>Ver servicios</a>
+      </div>
+      <div class="panel comment">
+        <a class="etia"  data-bs-toggle="modal" data-bs-target="#agregarServicio"><span>2 </span>Agregar servicios</a>
+      </div>
+
+      <div class="panel user">
+        <a class="etia" (click)="hacerFactura()"><span>3</span>Facturar</a>
+      </div>
+    </div>
+    <div>
+
+      <table class="rwd-table">
+        <tr>
+          <th>Tipo</th>
+          <th>Status</th>
+          <th>Total</th>
+        </tr>
+        <tr *ngFor="let hos of hospedajeModelGet">
+          <td data-th="Movie Title">Hospedado</td>
+          <td data-th="Year">Activo</td>
+          <td data-th="Gross">${{hos.total}}</td>
+        </tr>
+      </table>
+
+      <p>&larr; Drag window (in editor or full page view) to see the effect. &rarr;</p>
+    </div>
+  </div>
+  <div class="in-flex">
+    <div>
+      <div class="chicago">
+        <div class="container">
+          <div class="city-title">Datos del usuario</div>
+          <hr />
+          <div class="city-weather-temperature" id="city-weather-temperature">{{usuarioModelGetId.nombre}}</div>
+          <div class="city-weather-temperature" id="city-weather-temperature">Usuario</div>
+
+          <img src="http://openweathermap.org/img/w/01d.png" alt="weather-icon" class="city-weather-icon"
+            id="city-weather-icon" />
+          <div class="content">
+            <h4>{{usuarioModelGetId.email}}</h4>
+
+            <div class="nav-info-behind clearfix">
+            </div>
+          </div>
+        </div>
+      </div> <!-- end chicago -->
+    </div>
+
+  </div>
+</section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ver servicios</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center" style="text-align: center;">
+
+        <div class="row">
+          <div class="col" *ngFor="let ser of servicioModelGet">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="https://us.123rf.com/450wm/enotmaks/enotmaks1311/enotmaks131100031/24025739-vector-concepto-de-marketing-por-correo-electr%C3%B3nico-estilo-proceso-piso-de-dise%C3%B1o-ilustraci%C3%B3n-vector.jpg?ver=6" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">nombre: {{ser.nombre}}</h4>
+                <p class="card-text">Precio: ${{ser.precio}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="agregarServicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name" name="nombre" #nombre="ngModel" [(ngModel)]="servicioModelPost.nombre">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Precio:</label>
+            <input type="number" class="form-control" id="recipient-name" name="precio" #precio="ngModel" [(ngModel)]="servicioModelPost.precio">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="postServicio()">Agregar servicio</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

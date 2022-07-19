@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>One Page Wonder - Start Bootstrap Template</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+</head>
+
+<body id="page-top">
+  <!-- Navigation-->
+
+  <!-- Header-->
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container px-5">
+        <h1 class="masthead-heading mb-0">Bienvenido a los eventos</h1>
+        <h2 class="masthead-subheading mb-0">Hotel payaqui</h2>
+        <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Regresar a los Hoteles</a>
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+  <!-- Content section 1-->
+  <section id="scroll">
+    <div class="container px-5" data-bs-toggle="modal" data-bs-target="#eventoCumple"  (click)="obtenerEventosId('cumple')">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5"><img class="img-fluid rounded-circle"
+              src="https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2022/03/1140-birthday-cake-with-candles-esp.imgcache.rev.web.900.517.jpg"
+              alt="Fiestas" /></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Eventos de cumpleaños</h2>
+            <p>Las fiestas de cumpleaños suelen celebrarse en un ambiente de la casa del cumpleañero(a),
+              o bien en otro lugar destinado para tal fin, como una sala de fiestas o salón de fiestas,
+              en donde se colocan decoraciones que generalmente incluyen globos y en donde se sirven comida
+              y refrigerios a los invitados. (click a la imagen para más detalles)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Content section 2-->
+  <section>
+    <div class="container px-5" data-bs-toggle="modal" data-bs-target="#eventoBoda"  (click)="obtenerEventosId('boda')">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5"><img class="img-fluid rounded-circle"
+              src="https://media.revistavanityfair.es/photos/60e833ab29af8ce08356cacf/master/w_1600%2Cc_limit/221447.jpg"
+              alt="..." /></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4">Eventos de bodas</h2>
+            <p>Las bodas son uno de los eventos sociales más importantes debido al número de invitados y
+              a las necesidades que se requieren. Se deben tener en cuenta los gustos y preferencias de
+              la pareja, así como el lugar más adecuado para la celebración. (click a la imagen para mas detalles)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Content section 3-->
+  <section>
+    <div class="container px-5" data-bs-toggle="modal" data-bs-target="#eventoEspecial" (click)="obtenerEventosId('especial')">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5"><img class="img-fluid rounded-circle"
+              src="https://espanol.allstate.com/resources/MiAllstate/images/tools-resources/seguro-de-eventos/Dulces-sobre-mesa_Thinkstock_680x402.jpg"
+              alt="..." /></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Eventos especiales</h2>
+            <p>Es un evento de un solo tiempo basado o enfocado en un propósito específico. Los eventos especiales
+              también
+              pueden referir a otros objetivos tales como: ferias de trabajo, premiaciones, banquetes entre otros.
+              Reuniones
+              más pequeños que los congresos. (click a la imagen para mas detalles)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="py-5 bg-black">
+    <div class="container px-5">
+      <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2022</p>
+    </div>
+  </footer>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+
+
+
+
+
+<div class="modal fade" id="eventoBoda" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content rounded-0">
+      <div class="modal-body py-0">
+        <div class="d-flex main-content">
+          <div class="bg-image promo-img mr-3"
+            style="background-image:url(https://media.revistavanityfair.es/photos/60e833ab29af8ce08356cacf/master/w_1600%2Cc_limit/221447.jpg)">
+          </div>
+          <div class="content-text p-4 px-5 align-item-stretch">
+            <div class="text-center">
+              <a href="https://preview.colorlib.com/theme/bootstrap/modal-19/#" class="share"><span
+                  class="icon-share"></span></a>
+              <h1 class="mb-3 line">Evento de boda</h1>
+              <h4>{{eventoModelGetId.fecha}}</h4>
+              <h2>{{eventoModelGetId.nombre}}</h2>
+              <h3>Lugar: {{eventoModelGetId.lugar}}</h3>
+              <p>Evento previamente organizado, para reservar algun evento comunicarse con el encargado del hospital</p>
+              <div class="d-flex text-center social w-50 mx-auto">
+                <a class="d-inline-block d-flex align-items-center mr-auto like">
+                  <span class="icon-heart mr-2 icon"></span> <span>25</span>
+                </a>
+                <a class="d-inline-block d-flex align-items-center mx-auto message">
+                  <span class="icon-chat mr-2 icon"></span> <span>10</span>
+                </a>
+                <a class="d-inline-block d-flex align-items-center ml-auto add">
+                  <span class="icon-add mr-2"></span> <span>55</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="eventoEspecial" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content rounded-0">
+      <div class="modal-body py-0">
+        <div class="d-flex main-content">
+          <div class="bg-image promo-img mr-3"
+            style="background-image:url(https://espanol.allstate.com/resources/MiAllstate/images/tools-resources/seguro-de-eventos/Dulces-sobre-mesa_Thinkstock_680x402.jpg)">
+          </div>
+          <div class="content-text p-4 px-5 align-item-stretch">
+            <div class="text-center">
+              <a href="https://preview.colorlib.com/theme/bootstrap/modal-19/#" class="share"><span
+                  class="icon-share"></span></a>
+              <h3 class="mb-3 line">Eventos especiales</h3>
+              <h4>{{eventoModelGetId.fecha}}</h4>
+              <h2>{{eventoModelGetId.nombre}}</h2>
+              <h2>{{eventoModelGetId.descripcion}}</h2>
+              <h3>Lugar: {{eventoModelGetId.lugar}}</h3>
+              <p>Evento previamente organizado, para reservar algun evento comunicarse con el encargado del hospital</p>
+              <div class="d-flex text-center social w-50 mx-auto">
+                <a class="d-inline-block d-flex align-items-center mr-auto like">
+                  <span class="icon-heart mr-2 icon"></span> <span>25</span>
+                </a>
+                <a class="d-inline-block d-flex align-items-center mx-auto message">
+                  <span class="icon-chat mr-2 icon"></span> <span>10</span>
+                </a>
+                <a class="d-inline-block d-flex align-items-center ml-auto add">
+                  <span class="icon-add mr-2"></span> <span>55</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="eventoCumple" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content rounded-0">
+      <div class="modal-body py-0">
+        <div class="d-flex main-content">
+          <div class="bg-image promo-img mr-3"
+            style="background-image:url(https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2022/03/1140-birthday-cake-with-candles-esp.imgcache.rev.web.900.517.jpg)">
+          </div>
+          <div class="content-text p-4 px-5 align-item-stretch">
+            <div class="text-center">
+              <a href="https://preview.colorlib.com/theme/bootstrap/modal-19/#" class="share"><span
+                  class="icon-share"></span></a>
+              <h3 class="mb-3 line">Evento de cumpleaños</h3>
+
+              <h4>{{eventoModelGetId.fecha}}</h4>
+              <h2>{{eventoModelGetId.nombre}}</h2>
+              <h2>{{eventoModelGetId.descripcion}}</h2>
+              <h3>Lugar: {{eventoModelGetId.lugar}}</h3>
+              <p>Evento previamente organizado, para reservar algun evento comunicarse con el encargado del hospital</p>
+              <div class="d-flex text-center social w-50 mx-auto">
+                <a class="d-inline-block d-flex align-items-center mr-auto like">
+                  <span class="icon-heart mr-2 icon"></span> <span>25</span>
+                </a>
+                <a class="d-inline-block d-flex align-items-center mx-auto message">
+                  <span class="icon-chat mr-2 icon"></span> <span>10</span>
+                </a>
+                <a class="d-inline-block d-flex align-items-center ml-auto add">
+                  <span class="icon-add mr-2"></span> <span>55</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

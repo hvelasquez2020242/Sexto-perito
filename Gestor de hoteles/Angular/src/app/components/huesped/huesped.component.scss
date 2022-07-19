@@ -1,0 +1,288 @@
+.home{
+  display: flex;
+  flex-wrap: wrap;
+}
+.in-flex{
+  flex: 1;
+  min-width: 300px;
+}
+.in-flex:first-child {
+  flex: 2;
+  padding: 25px;
+  background-color: #fff;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+.in-flex div{
+  color: #DAD7D7;
+  text-align: center;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+//variables
+$select-color: #DAD7D7;
+
+
+.chicago {
+  box-sizing: border-box;
+  font: 13px "Open Sans", Arial;
+  padding: 40px 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  width: 360px;
+  margin-top: 15px;
+  height: 380px;
+  background: url('https://i.pinimg.com/564x/71/68/00/7168000e1b349b0a9685023e4a86fd70.jpg');
+  border-radius: 2px;
+  position: relative
+
+}
+
+.city-title, .city-weather-temperature, .city-weather-description, img.city-weather-icon {
+  font-family: 'Intro';
+  text-align: center;
+  margin:auto;
+  display: block;
+}
+
+.city-title {
+  font-size: 26px;
+  padding-top: 24px;
+}
+
+hr {
+  border-top: 1px solid #A3A3A3;
+  border-bottom: 1px solid #626165;
+  width: 112px;
+}
+
+.city-weather-temperature {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.city-weather-description {
+  width: 120px;
+  margin: auto;
+  text-align: center;
+}
+
+
+body {
+  padding: 20px;
+  font: 16px/22px "Open Sans", sans-serif;
+}
+.container2 {
+  margin: 0 auto;
+  max-width: 980px;
+  margin-top: 0px;
+}
+.panel {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 160px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+  .etia {
+    position: relative;
+    display: block;
+    padding: 12px 25px 25px 25px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 2;
+    span {
+      display: block;
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 96px;
+    }
+  }
+  &:after {
+    position: absolute;
+    font-family: FontAwesome;
+    color: rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all .5s;
+    // Use this to prevent misplacing background caused by default line-height
+    line-height: normal;
+  }
+  &.post {
+    background-color: #b8aa0e;
+    &:after {
+      content: "\f08d";
+      font-size: 200px;
+      color: darken(#b8aa0e, 4%);
+      top: 45px;
+      right: 60px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:hover:after {
+      top: 8px;
+    }
+  }
+  &.comment{
+    background-color: #0377c0;
+    &:after {
+      content: "\f075";
+      font-size: 180px;
+      color: darken(#0377c0, 4%);
+      top: 30px;
+      right: 35px;
+    }
+    &:hover:after {
+      top: -5px;
+    }
+  }
+  &.page {
+    background-color: #279824;
+    &:after {
+      content: "\f15c";
+      font-size: 160px;
+      color: darken(#279824, 4%);
+      top: 62px;
+      right: 39px;
+    }
+    &:hover:after {
+      top: 24px;
+    }
+  }
+  &.user {
+    background-color: #fc1c3e;
+    &:after {
+      content: "\f007";
+      font-size: 200px;
+      color: darken(#fc1c3e, 8%);
+      top: 45px;
+      right: 35px;
+    }
+    &:hover:after {
+      top: 7px;
+    }
+  }
+  &:hover:after {
+    transition: all .5s;
+  }
+}
+
+// More practical CSS...
+// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+
+$breakpoint-alpha: 480px; // adjust to your needs
+
+.rwd-table {
+  margin-top: 17%;
+  min-width: 100%; // adjust to your needs
+
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+  }
+
+  td {
+    display: block;
+
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+      font-weight: bold;
+
+      // optional stuff to make it look nicer
+      width: 6.5em; // magic number :( adjust according to your own content
+      display: inline-block;
+      // end options
+
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+
+  th, td {
+    text-align: left;
+
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+
+
+}
+
+
+// presentational styling
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+body {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) {
+      padding: 1em !important;
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}

@@ -1,0 +1,548 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Shop Homepage - Start Bootstrap Template</title>
+  <!-- Favicon-->
+  <!-- Bootstrap icons-->
+  <!-- Core theme CSS (includes Bootstrap)-->
+</head>
+
+<body>
+  <!-- Navigation-->
+
+  <!-- Header-->
+  <header class="bg-dark py-1">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <h1 class="display-3 fw-bolder">Hoteles</h1>
+        <p class="lead fw-normal text-white-50">Hoteles en la aplicacion</p>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Section-->
+  <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="col mb-5" *ngFor="let hotel of hotelModelGet">
+          <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="https://media-cdn.tripadvisor.com/media/photo-s/07/cf/5c/74/edificio.jpg"
+              alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">{{hotel.nombre}}</h5>
+                <!-- Product price-->
+                {{hotel.direccion}}
+              </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center"><a class="btn btn-outline-dark mt-auto" data-bs-toggle="modal"
+                  data-bs-target="#verHotel" (click)="getHotelesId(hotel._id)">Ver hotel</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Footer-->
+  <!-- Button trigger modal -->
+
+
+
+</body>
+
+
+</html>
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="habitacionSimple" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="d-flex justify-content-center mt-2 border-0">
+        <a class="btn btn-outline-dark col-3 m-3 active" data-bs-toggle="modal"
+          data-bs-target="#habitacionSimple">Habitacion simple</a>
+        <a class="btn btn-outline-dark col-3 m-3" data-bs-toggle="modal" data-bs-target="#habitacionMedia"
+          (click)="getHabitacionesMedia(hotelModelGetId._id)">Habitacion
+          media</a>
+        <a class="btn btn-outline-dark col-3 m-3" data-bs-toggle="modal" data-bs-target="#habitacionLujosa"
+          (click)="getHabitacionesLujosa(hotelModelGetId._id)">Habitacion
+          lujosa</a>
+      </div>
+      <div class="modal-body" *ngFor="let hab of habitacionesModelGet">
+        <div class="row g-0">
+          <div class="col-md-8 border-right">
+            <div class="status p-3">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Hotel</span>
+                        <span class="subheadings">{{hotelModelGetId.nombre}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Horario</span>
+                        <span class="subheadings">{{hab.horario}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Habitacines disponibles</span>
+                        <span class="subheadings"><i class="dots"></i>{{hab.disponibles}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Campo</span>
+                        <span class="subheadings">Hotel&restaurante</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Precio/noche</span>
+                        <span class="subheadings">${{hab.precio}}</span>
+                      </div>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Contact</span>
+                        <span class="subheadings">{{hotelModelGetId.administrador}}</span>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Caracteristicas</span>
+                        <span class="subheadings">{{hab.caracteristicas}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Direction</span>
+                        <span class="d-block subheadings">{{hotelModelGetId.direccion}}</span>
+                        <span class="d-flex flex-row">
+                          <img src="https://img.icons8.com/color/100/000000/google-maps.png" class="rounded"
+                            width="30" />
+                        </span>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-2 text-center">
+              <div class="profile">
+                <i class="bi bi-person-circle" style="font-size: 6em;"></i>
+                <span class="d-block mt-3 font-weight-bold">{{hotelModelGetId.administrador}}</span>
+              </div>
+              <div class="about-doctor">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Idioma</span>
+                          <span class="subheadings">{{hotelModelGetId.idioma}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Organizacion</span>
+                          <span class="subheadings">{{hotelModelGetId.nombre}}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Puesto</span>
+                          <span class="subheadings">{{hotelModelGetId.puesto}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cantidadDeDias">Reservar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="habitacionMedia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="d-flex justify-content-center mt-2 border-0">
+        <a class="btn btn-outline-dark col-3 m-3" data-bs-toggle="modal"
+        data-bs-target="#habitacionSimple">Habitacion simple</a>
+      <a class="btn btn-outline-dark col-3 m-3 active" data-bs-toggle="modal" data-bs-target="#habitacionMedia"
+        (click)="getHabitacionesMedia(hotelModelGetId._id)">Habitacion
+        media</a>
+      <a class="btn btn-outline-dark col-3 m-3" data-bs-toggle="modal" data-bs-target="#habitacionLujosa"
+        (click)="getHabitacionesLujosa(hotelModelGetId._id)">Habitacion
+        lujosa</a>
+      </div>
+      <div class="modal-body" *ngFor="let hab of habitacionesModelGetMedia">
+        <div class="row g-0">
+          <div class="col-md-8 border-right">
+            <div class="status p-3">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Hotel</span>
+                        <span class="subheadings">{{hotelModelGetId.nombre}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Horario</span>
+                        <span class="subheadings">{{hab.horario}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Habitacines disponibles</span>
+                        <span class="subheadings"><i class="dots"></i>{{hab.disponibles}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Campo</span>
+                        <span class="subheadings">Hotel&restaurante</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Precio/noche</span>
+                        <span class="subheadings">${{hab.precio}}</span>
+                      </div>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Contact</span>
+                        <span class="subheadings">{{hotelModelGetId.administrador}}</span>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Caracteristicas</span>
+                        <span class="subheadings">{{hab.caracteristicas}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Direction</span>
+                        <span class="d-block subheadings">{{hotelModelGetId.direccion}}</span>
+                        <span class="d-flex flex-row">
+                          <img src="https://img.icons8.com/color/100/000000/google-maps.png" class="rounded"
+                            width="30" />
+                        </span>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-2 text-center">
+              <div class="profile">
+                <i class="bi bi-person-circle" style="font-size: 6em;"></i>
+                <span class="d-block mt-3 font-weight-bold">{{hotelModelGetId.administrador}}</span>
+              </div>
+              <div class="about-doctor">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Idioma</span>
+                          <span class="subheadings">{{hotelModelGetId.idioma}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Organizacion</span>
+                          <span class="subheadings">{{hotelModelGetId.nombre}}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Puesto</span>
+                          <span class="subheadings">{{hotelModelGetId.puesto}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a type="button" class="btn btn-outline-secondary"  data-bs-toggle="modal" data-bs-target="#cantidadDeDias">Reservar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="habitacionLujosa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+
+      <div class="d-flex justify-content-center mt-2 border-0">
+        <a class="btn btn-outline-dark col-3 m-3" data-bs-toggle="modal"
+        data-bs-target="#habitacionSimple">Habitacion simple</a>
+      <a class="btn btn-outline-dark col-3 m-3" data-bs-toggle="modal" data-bs-target="#habitacionMedia"
+        (click)="getHabitacionesMedia(hotelModelGetId._id)">Habitacion
+        media</a>
+      <a class="btn btn-outline-dark col-3 m-3 active" data-bs-toggle="modal" data-bs-target="#habitacionLujosa"
+        (click)="getHabitacionesLujosa(hotelModelGetId._id)">Habitacion
+        lujosa</a>
+      </div>
+
+      <div class="modal-body" *ngFor="let hab of habitacionesModelGetLujosa">
+        <div class="row g-0">
+          <div class="col-md-8 border-right">
+            <div class="status p-3">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Hotel</span>
+                        <span class="subheadings">{{hotelModelGetId.nombre}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Horario</span>
+                        <span class="subheadings">{{hab.horario}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Habitacines disponibles</span>
+                        <span class="subheadings"><i class="dots"></i>{{hab.disponibles}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Campo</span>
+                        <span class="subheadings">Hotel&restaurante</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Precio/noche</span>
+                        <span class="subheadings">${{hab.precio}}</span>
+                      </div>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Contact</span>
+                        <span class="subheadings">{{hotelModelGetId.administrador}}</span>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Caracteristicas</span>
+                        <span class="subheadings">{{hab.caracteristicas}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex flex-column">
+                        <span class="heading d-block">Direction</span>
+                        <span class="d-block subheadings">{{hotelModelGetId.direccion}}</span>
+                        <span class="d-flex flex-row">
+                          <img src="https://img.icons8.com/color/100/000000/google-maps.png" class="rounded"
+                            width="30" />
+                        </span>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-2 text-center">
+              <div class="profile">
+                <i class="bi bi-person-circle" style="font-size: 6em;"></i>
+                <span class="d-block mt-3 font-weight-bold">{{hotelModelGetId.administrador}}</span>
+              </div>
+              <div class="about-doctor">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Idioma</span>
+                          <span class="subheadings">{{hotelModelGetId.idioma}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Organizacion</span>
+                          <span class="subheadings">{{hotelModelGetId.nombre}}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span class="heading d-block">Puesto</span>
+                          <span class="subheadings">{{hotelModelGetId.puesto}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cantidadDeDias">Reservar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal ver hotel-->
+
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="verHotel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-md  modal-dialog-centered" role="document">
+    <div class="modal-content rounded-0">
+      <div class="modal-body py-0">
+
+
+        <div class="d-block main-content">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/07/cf/5c/74/edificio.jpg" alt="Image"
+            class="img-fluid" style="background-color: #b2fcff; margin-top: 16px;">
+          <div class="content-text p-4">
+
+            <h3 class="mb-4">{{hotelModelGetId.nombre}}</h3>
+            <p class="mb-4">{{hotelModelGetId.descripcion}}</p>
+            <div class="d-flex">
+              <div class="ml-auto">
+                <a class="btn btn-outline-dark mt-auto" style="margin-right: 12px;" (click)="eventosGet()"
+                  data-bs-dismiss="modal">Ver eventos</a>
+                <a class="btn btn-outline-dark mt-auto" data-bs-target="#habitacionSimple" data-bs-toggle="modal"
+                  (click)="getHabitacionesSimple(hotelModelGetId._id)">Ver
+                  habitaciones</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="cantidadDeDias" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content rounded-0">
+      <div class="modal-body p-4 px-5">
+
+
+        <div class="main-content text-center">
+
+            <a href="#" class="close-btn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><span class="icon-close2"></span></span>
+              </a>
+
+            <div class="warp-icon mb-4">
+              <span class="icon-lock2"></span>
+            </div>
+            <form action="#">
+              <h1>Reservacion</h1>
+              <p class="mb-4">Ingrese la cantidad de dias que se quiere hospedar</p>
+              <div class="form-group mb-4">
+                <input type="number" class="form-control text-center" name="numero" #numero="ngModel"
+                [(ngModel)]="cantidadDeDiasModelPost.numero" placeholder="ingrese el numero">
+              </div>
+
+              <div class="d-flex">
+                <div class="mx-auto">
+                <a type="button" class="btn btn-outline-secondary" (click)="asignarDias()" data-bs-dismiss="modal">Submit</a>
+                </div>
+              </div>
+            </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

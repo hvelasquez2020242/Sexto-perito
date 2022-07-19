@@ -1,0 +1,38 @@
+
+
+
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+      <div class="modal-dialog" *ngFor="let res of reservacionModelGet">
+        <div class="modal-content">
+          <div class="modal-body ">
+            <div class="text-right"> <i class="fa fa-close close" data-dismiss="modal"></i> </div>
+            <div class="px-4 py-5">
+              <h5 class="text-uppercase">{{usuario}}</h5>
+              <h4 class="mt-5 theme-color mb-5">Gracias por tu orden</h4>
+              <span class="theme-color">Resumen de pago</span>
+              <div class="mb-3">
+                <hr class="new1">
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <span class="font-weight-bold">Total</span>
+                <span class="font-weight-bold theme-color">{{res.total}}</span>
+              </div>
+              <div class="text-center mt-5">
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                  <button type="button" class="btn btn-outline-dark" (click)="postHospedaje(res._id)">Inciar</button>
+                  <button type="button" class="btn btn-outline-danger" (click)=" cancelarHospedaje(res._id)">Cancelar</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
